@@ -9,13 +9,15 @@
 $(document).ready(function () {
 	songs = document.getElementsByClassName('title-container');
 
-	songs.addEventListener("mouseover", function( event ) {   
-	  // highlight the mouseover target
-	  event.target.style.color = "orange";
+	for (var i = 0; i < songs.length; i++){
+		songs[i].addEventListener("mouseover", function( event ) {   
+		  // highlight the mouseover target
+		  event.target.style.color = "orange";
 
-	  // reset the color after a short delay
-	  setTimeout(function() {
-		event.target.style.color = "";
-	  }, 500);
-	}, false);
+		  // reset the color after a short delay
+		  setTimeout(function() {
+			event.target.style.color = "";
+		  }, 500);
+		}, false);
+	}
 });
